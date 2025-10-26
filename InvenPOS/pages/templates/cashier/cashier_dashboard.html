@@ -1,0 +1,15 @@
+
+
+{% block content %}
+    <h1>Cashier Dashboard</h1>
+    <p>Welcome, {{ user.username }}! (Staff)</p>
+    
+   
+    <!-- Logout Button -->
+    <div class="logout-section">
+        <form action="{% url 'pages:logout' %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </div>
+{% endblock %}
